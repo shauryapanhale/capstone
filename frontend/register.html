@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register Team</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Load the script before the closing head tag -->
+  <script src="script.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Register Team</h1>
+    
+    <!-- ✅ Selected Department -->
+    <p id="selected-department">Selected Department: Loading...</p>
+
+    <!-- ✅ Team Name -->
+    <h2>Team Name</h2>
+    <input type="text" id="teamName" placeholder="Enter Team Name" />
+
+    <!-- ✅ Team Members -->
+    <h2>Select 4 Team Members</h2>
+    <div id="student-dropdowns">
+      <p>Loading students...</p>
+    </div>
+
+    <!-- ✅ Mentors -->
+    <h2>Mentor Preferences</h2>
+    <div id="mentor-dropdowns">
+      <p>Loading mentors...</p>
+    </div>
+
+    <!-- ✅ Ideas -->
+    <h2>Project Ideas</h2>
+    <input type="text" id="idea1" placeholder="Idea 1" />
+    <input type="text" id="idea2" placeholder="Idea 2" />
+    <input type="text" id="idea3" placeholder="Idea 3" />
+    <button onclick="submitTeam()" class="btn-submit">Submit Team</button>
+    <p id="confirmation-message" style="text-align:center; color: green; font-weight: bold; display: none; margin-top: 15px;">
+      Team registered successfully!
+    </p>
+    <!-- In register.html, after the confirmation message -->
+<div class="button-group">
+  <button id="back-home-btn" class="back-home-btn">🏠 Back to Home</button>
+</div>
+    
+  </div>
+
+  <!-- We don't need defer since we've loaded the script in the head -->
+</body>
+</html>

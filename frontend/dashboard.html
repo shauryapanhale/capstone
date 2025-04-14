@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body class="dashboard-page">
+  <div class="container">
+    <h2>Registered Teams</h2>
+    <div id="teams"></div>
+  </div>
+
+  <script>
+    window.onload = async () => {
+      const { teams } = await getDashboard();
+      const container = document.getElementById("teams");
+      if (!teams || teams.length === 0) {
+        container.innerHTML = "<p>No teams registered yet.</p>";
+        return;
+      }
+
+      teams.forEach(team => {
+        const card = document.createElement("div");
+        card.classList.add("card");
+        card.innerHTML = `
+          <h3>Team</h3>
+          <p><strong>Members:</strong> ${team["Member 1"]}, ${team["Member 2"]}, ${team["Member 3"]}, ${team["Member 4"]}</p>
+          <p><strong>Mentors:</strong> ${team["Mentor 1"]}, ${team["Mentor 2"]}, ${team["Mentor 3"]}, ${team["Mentor 4"]}</p>
+          <p><strong>Ideas:</strong> ${team["Idea 1"]}, ${team["Idea 2"]}, ${team["Idea 3"]}</p>
+        `;
+        container.appendChild(card);
+      });
+    };
+  </script>
+</body>
+</html>

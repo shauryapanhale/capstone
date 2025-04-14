@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Select Department</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Select Your Department</h2>
+    <form id="department-form">
+      <select id="department" required>
+        <option value="" disabled selected>Select Department</option>
+        <option value="CSE A">CSE A</option>
+        <option value="CSE B">CSE B</option>
+        <option value="AIDS">AIDS</option>
+      </select>
+      <br><br>
+      <button type="submit" class="btn">Next</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById("department-form").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const dept = document.getElementById("department").value;
+      console.log("📦 Selected Department:", dept);
+      localStorage.setItem("selectedDepartment", dept);
+      window.location.href = "register.html"; // ✅ Go to registration
+    });
+  </script>
+</body>
+</html>

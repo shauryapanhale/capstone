@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <h1 class="main-heading">🛡️ Administrator Login</h1>
+
+    <!-- Login Section -->
+    <form id="admin-login-form" class="card login-card">
+      <h2>Admin Dashboard</h2>
+      <label for="username">Username:</label>
+      <input type="text" id="username" required />
+      <label for="password">Password:</label>
+      <input type="password" id="password" required />
+      <button type="submit" class="admin-login-btn">
+        🔐 Login
+      </button>
+      
+      <p id="login-msg" class="message"></p>
+    </form>
+
+    <!-- Dashboard Section -->
+    <div id="admin-dashboard" class="card dashboard-card" style="display: none;">
+      <div class="dept-select-wrapper">
+        <label for="dept-select"><strong>Select Department:</strong></label>
+        <select id="dept-select">
+          <option value="">-- Select --</option>
+          <option value="CSE A">CSE A</option>
+          <option value="CSE B">CSE B</option>
+          <option value="AIDS">AIDS</option>
+        </select>
+      </div>
+
+      <h3 class="section-heading">📋 Registered Teams</h3>
+      <table id="teams-table">
+        <thead>
+          <tr>
+            <th>Team Name</th>
+            <th>Members</th>
+            <th>Mentors</th>
+            <th>Ideas</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+        
+      <h3 class="section-heading">👩‍🎓 Remaining Students</h3>
+      <div id="student-columns">
+        <ul id="student-list" class="columned-list"></ul>
+      </div>
+      
+      <!-- In admin.html, right after the download button -->
+<div class="download-section">
+  <button id="download-csv-btn" class="download-btn">📥 Download All Teams as CSV</button>
+  <button id="admin-back-home-btn" class="back-home-btn">🏠 Back to Home</button>
+</div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,264 @@
+/* frontend/style.css */
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #89f7fe, #66a6ff);
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+h1, h2, h3 {
+  color: #222;
+}
+
+input, select {
+  padding: 10px;
+  width: 90%;
+  margin: 10px auto;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.btn {
+  display: inline-block;
+  background: #007bff;
+  color: white;
+  padding: 12px 24px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background: #0056b3;
+}
+
+.hidden {
+  display: none;
+}
+
+.card {
+  background: #f0f8ff;
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+.hidden {
+  display: none;
+}
+/* General admin page layout */
+.admin-page .container {
+max-width: 900px;
+margin: 40px auto;
+background-color: #fefefe;
+padding: 25px 30px;
+border-radius: 10px;
+box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Login section */
+#admin-login-form label {
+display: block;
+margin: 10px 0 5px;
+font-weight: 500;
+}
+#admin-login-form input {
+width: 100%;
+padding: 8px;
+border-radius: 6px;
+border: 1px solid #ccc;
+}
+#login-btn {
+margin-top: 15px;
+padding: 10px 20px;
+font-size: 16px;
+}
+
+/* Dashboard section */
+#admin-dashboard {
+margin-top: 30px;
+}
+#dept-select {
+width: 100%;
+padding: 10px;
+margin: 15px 0 25px;
+border-radius: 6px;
+border: 1px solid #ccc;
+}
+
+/* Table styling */
+#teams-table {
+width: 100%;
+border-collapse: collapse;
+margin-bottom: 25px;
+}
+#teams-table th, #teams-table td {
+padding: 10px;
+text-align: left;
+border: 1px solid #ddd;
+}
+#teams-table th {
+background-color: #f2f2f2;
+font-weight: 600;
+}
+
+/* Student list styling */
+#remaining-students ul {
+padding-left: 20px;
+list-style-type: disc;
+columns: 2;
+gap: 20px;
+}
+
+#remaining-students li {
+margin-bottom: 5px;
+}
+/* Fancy Submit Button */
+.btn-submit {
+background-color: #4CAF50;
+color: white;
+padding: 12px 24px;
+font-size: 16px;
+font-weight: 600;
+border: none;
+border-radius: 8px;
+cursor: pointer;
+transition: background-color 0.3s, transform 0.2s;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-submit:hover {
+background-color: #45a049;
+transform: scale(1.03);
+}
+
+.btn-submit:active {
+transform: scale(0.98);
+background-color: #3e9041;
+}
+/* Style for the download section and button */
+.download-section {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.download-btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.download-btn:hover {
+  background-color: #45a049;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.download-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 3px rgba(0,0,0,0.2);
+}
+/* Style for the back to home button - add to your style.css */
+.back-home-btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem auto;
+}
+
+.back-home-btn:hover {
+  background-color: #45a049;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.back-home-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 3px rgba(0,0,0,0.2);
+}
+
+/* Style for button group - to keep buttons nicely aligned */
+.button-group {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.download-section {
+  margin-top: 2rem;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+.admin-login-btn {
+  background: linear-gradient(to right, #4CAF50, #45a049);
+  color: white;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.admin-login-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(to right, #43a047, #388e3c);
+}
+
+.admin-login-btn:active {
+  transform: scale(0.98);
+}
+.delete-btn {
+  background: transparent;
+  border: none;
+  color: red;
+  font-size: 18px;
+  cursor: pointer;
+  margin-left: 8px;
+}
+
+.delete-btn:hover {
+  transform: scale(1.2);
+}
+
